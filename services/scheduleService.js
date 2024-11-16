@@ -1,4 +1,5 @@
 // services/scheduleService.js
+import { dummySchedules } from '../data/dummySchedules';
 
 export const fetchSchedules = async () => {
     try {
