@@ -47,7 +47,7 @@ const Home = () => {
       </header>
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
         {schedules.map((schedule) => (
-          <ScheduleCard schedule={schedule} />
+          <ScheduleCard key={schedule._id} schedule={schedule} />
         ))}
       </div>
     </div>
