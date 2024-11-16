@@ -5,6 +5,7 @@ import React, { useEffect, useState } from 'react';
 import { fetchSchedules } from '../services/scheduleService';
 import ScheduleCard from '../components/ScheduleCard';
 
+
 const Home = () => {
   const [schedules, setSchedules] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -39,6 +40,8 @@ const Home = () => {
       </div>
     );
   }
+
+  
 
   return (
     <div className="container mx-auto p-4">
