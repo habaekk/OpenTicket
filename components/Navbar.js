@@ -4,7 +4,7 @@ import React from 'react';
 
 const Navbar = () => {
   return (
-    <nav className="bg-green-900 p-4 text-white">
+    <nav className="bg-gray-100 p-4 text-black h-12 flex items-center">
       <h1 className="text-xl font-bold">오픈티켓</h1>
     </nav>
   );

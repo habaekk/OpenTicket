@@ -17,9 +17,9 @@ export default function CategoryFilter({ schedules }) {
             key={category}
             className={`px-4 py-2 rounded-full font-bold ${
               selectedCategory === category
-                ? "bg-blue-600 text-white"
+                ? "bg-green-600 text-white"
                 : "bg-gray-200 text-gray-800"
-            } hover:bg-blue-400 hover:text-white transition`}
+            } hover:bg-green-400 hover:text-white transition`}
             onClick={() => setSelectedCategory(category)}
           >
             {category}
