@@ -6,14 +6,38 @@ import ScheduleCard from '../components/ScheduleCard';
 
 const Home = () => {
   const [schedules, setSchedules] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     const getSchedules = async () => {
-      const data = await fetchSchedules();
-      setSchedules(data);
+      try {
+        const data = await fetchSchedules();
+        setSchedules(data);
+      } catch {
+        setError(true);
+      } finally {
+        setLoading(false);
+      }
     };
     getSchedules();
   }, []);
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center h-screen">
+        <p>스케줄을 불러오는 중입니다...</p>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="flex items-center justify-center h-screen">
+        <p>스케줄을 불러오는데 실패했습니다.</p>
+      </div>
+    );
+  }
 
   return (
     <div className="container mx-auto p-4">
