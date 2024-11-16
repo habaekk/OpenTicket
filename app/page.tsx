@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { fetchSchedules } from "../services/scheduleService";
 import ScheduleCard from "../components/ScheduleCard";
 import HeroSection from "../components/HeroSection";
+import CategoryFilter from "../components/CategoryFilter";
 
 const Home = () => {
   const [schedules, setSchedules] = useState([]);
@@ -55,6 +56,7 @@ const Home = () => {
         ))}
       </div>
     </div>
+    <CategoryFilter schedules={schedules} />
     </div>
   );
 };
