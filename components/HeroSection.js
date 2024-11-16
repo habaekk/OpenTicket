@@ -9,7 +9,7 @@ export default function HeroSection({
   imageAlt = "티켓 이미지",
 }) {
   return (
-    <div className="bg-blue-600 text-white py-8 px-4">
+    <div className="bg-blue-600 text-white py-16 px-4 max-h-[500px]">
       <div className="container mx-auto flex flex-col items-center text-center md:flex-row md:text-left md:justify-between">
         {/* Left Text */}
         <div className="md:w-1/2">
@@ -22,10 +22,10 @@ export default function HeroSection({
             {buttonText}
           </a>
         </div>
-        {/* Right Image */}
-        <div className="mt-0 md:mt-0 md:w-1/2">
-          <img src={imageSrc} alt={imageAlt} className="w-full h-auto" />
-        </div>
+        {/* Right Image
+        <div className="mt-0 md:mt-0 md:w-1/2 object-cover">
+          <img src={imageSrc} alt={imageAlt} className="w-full h-full " />
+        </div> */}
       </div>
     </div>
   );
