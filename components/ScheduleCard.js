@@ -10,7 +10,7 @@ const ScheduleCard = ({ schedule }) => {
       <p className="text-sm text-gray-500 mb-2">{categoryName}</p>
       <p className="text-sm text-gray-500 mb-4">{siteName}</p>
       <p className="text-gray-800 font-medium">
-        {new Date(openDate).toLocaleString()}
+        티켓오픈: {new Date(openDate).toLocaleString()}
       </p>
     </div>
   );

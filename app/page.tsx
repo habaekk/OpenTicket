@@ -1,10 +1,9 @@
-// pages/index.js
-"use client"
+"use client";
 
-import React, { useEffect, useState } from 'react';
-import { fetchSchedules } from '../services/scheduleService';
-import ScheduleCard from '../components/ScheduleCard';
-
+import React, { useEffect, useState } from "react";
+import { fetchSchedules } from "../services/scheduleService";
+import ScheduleCard from "../components/ScheduleCard";
+import HeroSection from "../components/HeroSection";
 
 const Home = () => {
   const [schedules, setSchedules] = useState([]);
@@ -41,9 +40,11 @@ const Home = () => {
     );
   }
 
-  
-
   return (
+    <div>
+    <HeroSection ></HeroSection>
+
+    {/* Main Content */}
     <div className="container mx-auto p-4">
       <header className="mb-6">
         <h1 className="text-2xl font-bold">다가오는 티켓 일정</h1>
@@ -53,6 +54,7 @@ const Home = () => {
           <ScheduleCard key={schedule._id} schedule={schedule} />
         ))}
       </div>
+    </div>
     </div>
   );
 };
