@@ -17,7 +17,7 @@ export default function HeroSection({
           <p className="text-lg mb-6">{description}</p>
           <a
             href={buttonLink}
-            className="bg-orange-600 text-white py-2 px-4 rounded-lg font-bold hover:bg-orange-400"
+            className="bg-orange-600 text-white py-2 px-4 rounded-lg font-bold hover:bg-orange-500"
           >
             {buttonText}
           </a>

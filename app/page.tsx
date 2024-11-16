@@ -5,6 +5,7 @@ import { fetchSchedules } from "../services/scheduleService";
 import ScheduleCard from "../components/ScheduleCard";
 import HeroSection from "../components/HeroSection";
 import CategoryFilter from "../components/CategoryFilter";
+import RecommendedTickets from "../components/RecommendedTickets";
 
 const Home = () => {
   const [schedules, setSchedules] = useState([]);
@@ -43,6 +44,7 @@ const Home = () => {
 
   return (
     <div>
+    
     <HeroSection ></HeroSection>
 
     {/* Main Content */}
@@ -56,8 +58,14 @@ const Home = () => {
         ))}
       </div>
     </div>
+
     <CategoryFilter schedules={schedules} />
+    
+    <RecommendedTickets tickets={schedules} />
+    
     </div>
+
+
   );
 };
 
